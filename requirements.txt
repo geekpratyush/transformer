@@ -1,0 +1,14 @@
+streamlit>=1.30.0
+pandas>=1.5.0
+requests
+langchain>=0.2.2
+langchain-community
+langchain-huggingface
+unstructured
+pdfminer.six
+python-docx
+openpyxl
+faiss-cpu
+sentence-transformers
+docx2txt
+langchain_unstructured
