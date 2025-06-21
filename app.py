@@ -106,6 +106,9 @@ st.markdown(
         <h3 style="color:white;text-align:center;">
             Upload. Ask. Unlock insights.
         </h3>
+        <p style="color:white;text-align:center;">
+            Built by <a href="https://www.linkedin.com/in/leadtherightway/" target="_blank" style="color:#1E90FF;">Pratyush Ranjan Mishra</a>
+        </p>
     </div>
     """,
     unsafe_allow_html=True
