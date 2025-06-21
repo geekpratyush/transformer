@@ -99,7 +99,19 @@ if upload_trigger and uploaded_files:
         st.sidebar.warning("⚠️ No valid content was processed.")
 
 # Main UI
+st.markdown(
+    """
+    <div style="background-color:#2F4F4F;padding:25px;border-radius:10px">
+        <h1 style="color:white;text-align:center;">SmartDocAI</h1>
+        <h3 style="color:white;text-align:center;">
+            Upload. Ask. Unlock insights.
+        </h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.title("🤖 Ask Questions Based on Your Documents")
+
 with st.expander("ℹ️ Help / About this App"):
     st.markdown("""
 **🚀 Prototype developed by Pratyush Ranjan Mishra**
@@ -162,6 +174,7 @@ if submitted and query.strip():
             " It also helps managers with planning, roadmap creation, presentation outlines, and technical storytelling."
             " Be ready to answer questions about how it works and what kinds of tasks it can accelerate."
             " You should be able to impress the user with it's features."
+            
         )
         full_prompt = f"Context:\n{context}\n\nQuestion: {query}"
     else:
