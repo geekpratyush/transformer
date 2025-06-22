@@ -1,0 +1,35 @@
+MT103 Class Methods:
+
+Constructors:
+- MT103()
+- MT103(SwiftMessage m)
+- MT103(MtSwiftMessage m)
+- MT103(String sender, String receiver)
+- MT103(String fin)
+- MT103(File file)
+- MT103(InputStream stream)
+
+Static Methods:
+- static MT103 parse(MtSwiftMessage m)
+- static MT103 parse(String fin)
+- static MT103 parse(InputStream stream)
+- static MT103 parse(File file)
+- static MT103 fromJson(String json)
+
+Instance Methods:
+- MT103 append(SwiftTagListBlock block)
+- MT103 append(Tag... tags)
+- MT103 append(Field... fields)
+- String getMessageType()
+- String getUETR()
+
+Field Accessor Methods:
+- Field20 getField20()
+- Field23B getField23B()
+- Field77B getField77B()
+- List<Field13C> getField13C()
+(Note: There are many more field accessor methods following the same pattern for all MT103 fields)
+
+Constants:
+- static final String NAME
+- static final int SRU
