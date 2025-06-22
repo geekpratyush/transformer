@@ -157,7 +157,7 @@ This intelligent assistant is designed to help **business analysts, developers, 
 
 Developed with ❤️ by **Pratyush Ranjan Mishra**
 """)
-
+ 
 
 st.markdown(
     "<div style='text-align: right; font-size: 0.85em; color: gray;'>Built by <strong>Pratyush Ranjan Mishra</strong></div>",
@@ -173,7 +173,24 @@ if submitted and query.strip():
 
     if use_document_context and st.session_state.retriever:
         docs = st.session_state.retriever.invoke(query)
-        docs = docs[:MAX_CONTEXT_CHUNKS]
+
+        # Dynamically trim context to fit token budget
+        total_chars = 0
+        max_chars = MAX_CONTEXT_CHUNKS * MAX_TOKENS_PER_CHUNK
+        trimmed_docs = []
+
+        for doc in docs:
+            content = doc.page_content
+            if total_chars + len(content) > max_chars:
+                remaining = max_chars - total_chars
+                if remaining > 0:
+                    doc.page_content = content[:remaining]
+                    trimmed_docs.append(doc)
+                break
+            trimmed_docs.append(doc)
+            total_chars += len(content)
+
+        docs = trimmed_docs
 
         if show_chunks and docs:
             with st.expander("📄 Retrieved Chunk Details"):
