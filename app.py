@@ -130,7 +130,34 @@ st.markdown(
 st.title("🤖 Ask Questions Based on Your Documents")
 
 with st.expander("ℹ️ Help / About this App"):
-    st.markdown("Prototype developed by Pratyush Ranjan Mishra")
+    st.markdown("""
+🚀 **Prototype developed by Pratyush Ranjan Mishra**
+
+This intelligent assistant is designed to help **business analysts, developers, and managers** drastically speed up development, planning, and documentation tasks.
+
+### 💡 What It Can Do:
+- 📄 Ingests documents (Excel, Word, PDF, Text, Java class files) and answers context-based questions  
+- 🧠 Understands Java class structures and generates integration-ready code  
+- 🏗️ Suggests backend services, APIs, and frameworks tailored to your existing stack  
+- 📊 Assists with Excel-based data insights, conversion tasks, and mappings  
+- ✍️ Generates technical documentation, user stories, architecture narratives  
+- 🎯 Creates PowerPoint bullet points and storylines for executive presentations  
+- 🧩 Can even generate Python code to create diagrams or flowcharts  
+- 👨‍💼 Helps managers with roadmap planning, effort estimates, and backlog organization  
+
+### ✅ How to Use:
+1. Upload documents using the sidebar — supported types: `.txt`, `.pdf`, `.docx`, `.xlsx`, etc.  
+2. (Optional) Preview content or view processed chunk details via sidebar toggles  
+3. Enter your natural-language query in the main text box (e.g., _"Generate Java service class based on this POJO"_)  
+4. Hit **Submit** — your custom AI engine will reply with context-aware answers  
+5. View response and reference source chunks if needed  
+6. You can ask for help in the prompt for better use of this.
+
+> This is a **working prototype** and a glimpse into how AI is transforming modern development practices.
+
+Developed with ❤️ by **Pratyush Ranjan Mishra**
+""")
+
 
 st.markdown(
     "<div style='text-align: right; font-size: 0.85em; color: gray;'>Built by <strong>Pratyush Ranjan Mishra</strong></div>",
